@@ -7,6 +7,7 @@ import Understanding from '../Understanding/Understanding.js';
 import Support from '../Support/Support.js';
 import Comments from '../Comments/Comments.js';
 import Review from '../Review/Review.js';
+import Submitted from '../Submitted/Submitted.js';
 function App() {
 
   const history = useHistory();
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route exact path = '/review'>
           <Review />
+        </Route>
+        <Route exact path = '/submitted'>
+          <Submitted />
         </Route>
       </div>
     </Router>

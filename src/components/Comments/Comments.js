@@ -26,8 +26,7 @@ function Comments() {
       <input
         value = {comments}
         type = 'text'
-        onChange = {(event) => setComments(event.target.value)}
-        required />
+        onChange = {(event) => setComments(event.target.value)}/>
         <button type = 'submit'>NEXT</button>
     </form>
   );
