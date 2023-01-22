@@ -11,6 +11,7 @@ function Review() {
   const understanding = useSelector((store) => store.understanding);
   const support = useSelector((store) => store.support);
   const comments = useSelector((store) => store.comments);
+  // Grabs values from state
 
   const handleSubmit  = () => {
     axios({
@@ -28,6 +29,7 @@ function Review() {
       console.error('Error in Review POST: ', err);
     })
   };
+  // Packages all values together and sends them to the router
 
   return (
     <>
@@ -54,6 +56,7 @@ function Review() {
       <button onClick = {handleSubmit}>Submit Feedback</button>
     </>
   )
+  // HTML to be displayed at /review route
 }
 
 export default Review;

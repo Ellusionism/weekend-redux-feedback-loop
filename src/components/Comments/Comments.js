@@ -19,6 +19,7 @@ function Comments() {
     })
     history.push('/review')
   }
+  // Updates comments state with entered value upon submission 
 
   return(
     <form onSubmit = {handleSubmit}>
@@ -30,6 +31,8 @@ function Comments() {
         <button type = 'submit'>NEXT</button>
     </form>
   );
+  // HTML to be displayed at /comments route
 };
+
 
 export default Comments;

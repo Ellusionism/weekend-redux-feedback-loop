@@ -19,6 +19,7 @@ function Feeling() {
     })
     history.push('/understanding')
   }
+  // Updates feeling state with entered value upon submission 
 
   return(
     <form onSubmit = {handleSubmit}>
@@ -33,6 +34,7 @@ function Feeling() {
         <button type = 'submit'>NEXT</button>
     </form>
   );
+  // HTML to be displayed at /feeling route
 };
 
 export default Feeling;

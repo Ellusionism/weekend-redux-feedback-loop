@@ -9,6 +9,7 @@ router.post("/", (req, res) => {
     support: req.body.support,
     comments: req.body.comments,
   };
+  // Creates a feedback object with all the submitted data
   sqlQuery = `
     INSERT INTO feedback ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4)
@@ -22,5 +23,6 @@ router.post("/", (req, res) => {
     res.sendStatus(500);
   });
 });
+// Sends submitted feedback object to the DB
 
 module.exports = router;

@@ -19,6 +19,7 @@ function Support() {
     })
     history.push('/comments')
   }
+  // Updates support state with entered value upon submission 
 
   return(
     <form onSubmit = {handleSubmit}>
@@ -33,6 +34,7 @@ function Support() {
         <button type = 'submit'>NEXT</button>
     </form>
   );
+  // HTML to be displayed at /support route
 };
 
 export default Support;

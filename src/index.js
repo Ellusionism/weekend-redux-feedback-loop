@@ -7,37 +7,37 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-// Reducer for submitting feeling rating
 const feeling = (state = 0, action) => {
   if (action.type === 'SUBMIT_FEELING') {
     return action.payload;
   };
   return state;
 };
+// Reducer for submitting feeling rating
 
-// Reducer for submitting understanding rating
 const understanding = (state = 0, action) => {
   if (action.type === 'SUBMIT_UNDERSTANDING') {
     return action.payload;
   };
   return state;
 };
+// Reducer for submitting understanding rating
 
-// Reducer for submitting support rating
 const support = (state = 0, action) => {
   if (action.type === 'SUBMIT_SUPPORT') {
     return action.payload;
   };
   return state;
 };
+// Reducer for submitting support rating
 
-// Reducer for submitting comments
 const comments = (state = '', action) => {
   if (action.type === 'SUBMIT_COMMENTS') {
     return action.payload;
   };
   return state;
 };
+// Reducer for submitting comments
 
 const store = createStore(
   combineReducers({
@@ -50,6 +50,7 @@ const store = createStore(
     logger
   )
 )
+// Creates a store through which components can access and update states
 
 ReactDOM.render(
   <React.StrictMode>
@@ -59,4 +60,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+// Provides App.js and it's components access to states and reducers
 registerServiceWorker();

@@ -13,13 +13,15 @@ function Submitted() {
     dispatch({ type: 'SET_COMMENTS', payload: ''});
     history.push('/');
   };
+  // Resets state and returns the user to the homepage
 
   return (
     <>
       <h2>Feedback successfully submitted!</h2>
       <button onClick = {handleClick}>Home</button>
     </>
-  )
+  );
+  // HTML to be displayed at /submitted route
 
 }
 

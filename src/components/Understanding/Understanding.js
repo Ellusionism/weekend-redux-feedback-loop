@@ -19,6 +19,7 @@ function Understanding() {
     })
     history.push('/support')
   }
+  // Updates understanding state with entered value upon submission 
 
   return(
     <form onSubmit = {handleSubmit}>
@@ -33,6 +34,7 @@ function Understanding() {
         <button type = 'submit'>NEXT</button>
     </form>
   );
+  // HTML to be displayed at /understanding route
 };
 
 export default Understanding;
