@@ -10,7 +10,7 @@ router.post("/", (req, res) => {
     comments: req.body.comments,
   };
   sqlQuery = `
-    INSERT INTO prime_feedback ("feeling", "understanding", "support", "comments")
+    INSERT INTO feedback ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4)
     `
   sqlValues = [feedback.feeling, feedback.understanding, feedback.support, feedback.comments];
@@ -22,3 +22,5 @@ router.post("/", (req, res) => {
     res.sendStatus(500);
   });
 });
+
+module.exports = router;

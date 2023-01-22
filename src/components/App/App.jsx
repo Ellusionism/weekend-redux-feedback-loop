@@ -6,6 +6,7 @@ import Feeling from '../Feeling/Feeling.js';
 import Understanding from '../Understanding/Understanding.js';
 import Support from '../Support/Support.js';
 import Comments from '../Comments/Comments.js';
+import Review from '../Review/Review.js';
 function App() {
 
   const history = useHistory();
@@ -19,7 +20,7 @@ function App() {
         </header>
         <Route exact path = '/'>
           <Link to = '/feeling'>
-            <button>Start Feedback</button>
+            <button>Start New Feedback</button>
           </Link>
         </Route>
         <Route exact path = '/feeling'>
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route exact path = '/comments'>
           <Comments />
+        </Route>
+        <Route exact path = '/review'>
+          <Review />
         </Route>
       </div>
     </Router>
