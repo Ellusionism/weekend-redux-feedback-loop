@@ -2,6 +2,12 @@ import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Button from '@mui/material/Button';
+import Table from '@mui/material/Table';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TableBody from '@mui/material/TableBody';
 
 function Review() {
 
@@ -33,27 +39,28 @@ function Review() {
 
   return (
     <>
-      <table>
-      <tbody>
-          <tr>
-            <td>Feeling</td>
-            <td>{feeling}</td>
-          </tr>
-          <tr>
-            <td>Understanding</td>
-            <td>{understanding}</td>
-          </tr>
-          <tr>
-            <td>Support</td>
-            <td>{support}</td>
-          </tr>
-          <tr>
-            <td>Comments</td>
-            <td>{comments}</td>
-          </tr>
-        </tbody>
-      </table>
-      <button onClick = {handleSubmit}>Submit Feedback</button>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Feeling</TableCell>
+            <TableCell>Understanding</TableCell>
+            <TableCell>Support</TableCell>
+            <TableCell>Comments</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>{feeling}</TableCell>
+            <TableCell>{understanding}</TableCell>
+            <TableCell>{support}</TableCell>
+            <TableCell>{comments}</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+      <Button 
+      onClick = {handleSubmit}
+      variant = 'contained'
+      margin='dense'>Submit Feedback</Button>
     </>
   )
   // HTML to be displayed at /review route

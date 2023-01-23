@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
+
 
 function Submitted() {
 
@@ -18,7 +20,7 @@ function Submitted() {
   return (
     <>
       <h2>Feedback successfully submitted!</h2>
-      <button onClick = {handleClick}>Home</button>
+      <Button onClick = {handleClick} variant = 'contained'>Home</Button>
     </>
   );
   // HTML to be displayed at /submitted route

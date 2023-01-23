@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Comments() {
   const dispatch = useDispatch();
@@ -24,11 +26,14 @@ function Comments() {
   return(
     <form onSubmit = {handleSubmit}>
       <p>Any comments you would like to add?</p>
-      <input
+      <TextField
+        margin='normal'
+        multiline={true}
+        fullWidth
         value = {comments}
-        type = 'text'
-        onChange = {(event) => setComments(event.target.value)}/>
-        <button type = 'submit'>NEXT</button>
+        onChange = {(event) => setComments(event.target.value)}>
+        </TextField>
+        <Button type = 'submit' variant = 'contained'>NEXT</Button>
     </form>
   );
   // HTML to be displayed at /comments route

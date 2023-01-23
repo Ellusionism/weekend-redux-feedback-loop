@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import Button from '@mui/material/Button';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
 function Support() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [support, setSupport] = useState(0);
+  const [support, setSupport] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,14 +29,22 @@ function Support() {
   return(
     <form onSubmit = {handleSubmit}>
       <p>How well were you being supported today?</p>
-      <input
-        value = {support}
-        type = 'number'
-        min = '1'
-        max = '5'
-        onChange = {(event) => setSupport(event.target.value)}
-        required />
-        <button type = 'submit'>NEXT</button>
+      <FormControl fullWidth>
+        <InputLabel>Support</InputLabel>
+        <Select
+          value={support}
+          onChange={(event) => setSupport(event.target.value)}
+          required={true}
+          margin='normal'
+        >
+          <MenuItem value={1}>1</MenuItem>
+          <MenuItem value={2}>2</MenuItem>
+          <MenuItem value={3}>3</MenuItem>
+          <MenuItem value={4}>4</MenuItem>
+          <MenuItem value={5}>5</MenuItem>
+        </Select>
+      </FormControl>
+      <Button type = 'submit' variant = 'contained'>NEXT</Button>
     </form>
   );
   // HTML to be displayed at /support route

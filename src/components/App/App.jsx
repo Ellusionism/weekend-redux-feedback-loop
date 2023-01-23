@@ -8,6 +8,7 @@ import Support from '../Support/Support.js';
 import Comments from '../Comments/Comments.js';
 import Review from '../Review/Review.js';
 import Submitted from '../Submitted/Submitted.js';
+import Button from '@mui/material/Button'
 // Importing the components to be displayed
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
         </header>
         <Route exact path = '/'>
           <Link to = '/feeling'>
-            <button>Start New Feedback</button>
+            <Button variant='contained'>Start New Feedback</Button>
           </Link>
         </Route>
         <Route exact path = '/feeling'>
