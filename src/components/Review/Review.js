@@ -57,10 +57,7 @@ function Review() {
           </TableRow>
         </TableBody>
       </Table>
-      <Button 
-      onClick = {handleSubmit}
-      variant = 'contained'
-      margin='dense'>Submit Feedback</Button>
+      <Button onClick = {handleSubmit} variant = 'contained'>Submit Feedback</Button>
     </>
   )
   // HTML to be displayed at /review route

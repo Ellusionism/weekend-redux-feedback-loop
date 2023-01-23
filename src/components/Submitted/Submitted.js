@@ -9,9 +9,9 @@ function Submitted() {
   const history = useHistory();
 
   const handleClick = () => {
-    dispatch({ type: 'SET_FEELING', payload: 0});
-    dispatch({ type: 'SET_UNDERSTANDING', payload: 0});
-    dispatch({ type: 'SET_SUPPORT', payload: 0});
+    dispatch({ type: 'SET_FEELING', payload: null});
+    dispatch({ type: 'SET_UNDERSTANDING', payload: null});
+    dispatch({ type: 'SET_SUPPORT', payload: null});
     dispatch({ type: 'SET_COMMENTS', payload: ''});
     history.push('/');
   };

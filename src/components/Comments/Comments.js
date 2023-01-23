@@ -27,7 +27,7 @@ function Comments() {
     <form onSubmit = {handleSubmit}>
       <p>Any comments you would like to add?</p>
       <TextField
-        margin='normal'
+        margin='dense'
         multiline={true}
         fullWidth
         value = {comments}

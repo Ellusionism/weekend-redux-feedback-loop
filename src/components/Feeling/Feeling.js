@@ -33,7 +33,7 @@ function Feeling() {
         <InputLabel>Feeling</InputLabel>
         <Select
           value={feeling}
-          margin='normal'
+          margin='dense'
           onChange={(event) => setFeeling(event.target.value)}
           required={true}
         >

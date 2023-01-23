@@ -11,7 +11,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-const feeling = (state = 0, action) => {
+const feeling = (state = null, action) => {
   if (action.type === 'SUBMIT_FEELING') {
     return action.payload;
   };
@@ -19,7 +19,7 @@ const feeling = (state = 0, action) => {
 };
 // Reducer for submitting feeling rating
 
-const understanding = (state = 0, action) => {
+const understanding = (state = null, action) => {
   if (action.type === 'SUBMIT_UNDERSTANDING') {
     return action.payload;
   };
@@ -27,7 +27,7 @@ const understanding = (state = 0, action) => {
 };
 // Reducer for submitting understanding rating
 
-const support = (state = 0, action) => {
+const support = (state = null, action) => {
   if (action.type === 'SUBMIT_SUPPORT') {
     return action.payload;
   };

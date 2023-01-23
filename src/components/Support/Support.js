@@ -35,7 +35,7 @@ function Support() {
           value={support}
           onChange={(event) => setSupport(event.target.value)}
           required={true}
-          margin='normal'
+          margin='dense'
         >
           <MenuItem value={1}>1</MenuItem>
           <MenuItem value={2}>2</MenuItem>
